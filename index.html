@@ -1,1 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Peluche | Alta Costura de Peluches</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #fcfbf9;
+            --primary-navy: #1a2332;
+            --gold-accent: #c5a059;
+            --gold-light: #f4ecdf;
+            --text-main: #2c2c2c;
+            --text-muted: #666666;
+            --white: #ffffff;
+            --border-color: #e5e0d8;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            text-align: center;
+            font-size: 0.85rem;
+            padding: 8px 15px;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-area img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold-accent);
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            letter-spacing: 1.5px;
+        }
+
+        .brand-subtitle {
+            font-size: 0.7rem;
+            color: var(--gold-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-navy);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 35, 50, 0.65), rgba(26, 35, 50, 0.65)), url('https://images.unsplash.com/photo-1559454403-b8fb8852101e?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-weight: 300;
+            color: #f0f0f0;
+        }
+
+        .btn-gold {
+            background-color: var(--gold-accent);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-gold:hover {
+            background-color: #b08d46;
+            transform: translateY(-2px);
+        }
+
+        /* Sección Próximamente (Placeholder) */
+        .coming-soon {
+            max-width: 800px;
+            margin: 80px auto;
+            text-align: center;
+            padding: 50px 20px;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .coming-soon i {
+            font-size: 3rem;
+            color: var(--gold-accent);
+            margin-bottom: 20px;
+        }
+
+        .coming-soon h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-navy);
+            margin-bottom: 15px;
+        }
+
+        .coming-soon p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 25px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            color: #a0aec0;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        ✨ OSOS Y REGALOS DE ALTA GAMA • PRÓXIMAMENTE COLECCIÓN OFICIAL ✨
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-area">
+                <img src="https://images.unsplash.com/photo-1534723485860-8e34f82c4ae7?q=80&w=200&auto=format&fit=crop" alt="Logo Maison Peluche">
+                <div>
+                    <div class="brand-name">MAISON PELUCHE</div>
+                    <div class="brand-subtitle">Alta Costura de Peluches</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Colección</a></li>
+                <li><a href="#">La Maison</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>El arte de regalar ternura</h1>
+        <p>Osos de peluche hechos con alta costura, detalles exclusivos y acabados de lujo para momentos inolvidables.</p>
+        <a href="#catalogo" class="btn-gold">Próximamente Lanzamiento</a>
+    </section>
+
+    <!-- Sección de espera mientras llegan los productos -->
+    <div class="coming-soon" id="catalogo">
+        <i class="fa-solid fa-gift"></i>
+        <h2>Colección en Preparación</h2>
+        <p>Muy pronto revelaremos nuestro catálogo exclusivo de osos y regalos de alta gama. Mantente atento a las novedades.</p>
+        <a href="https://wa.me/51999999999" target="_blank" class="btn-gold" style="background-color: #25d366;">
+            <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+        </a>
+    </div>
+
+    <footer>
+        <div class="brand-name" style="color: var(--white); margin-bottom: 5px;">MAISON PELUCHE</div>
+        <p>Alta costura de peluches y regalos de alta gama. Todos los derechos reservados © 2026</p>
+    </footer>
+
+</body>
+</html>
