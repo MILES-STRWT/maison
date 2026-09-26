@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Peluche | Alta Costura de Peluches</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #111c2e;
+            --accent-gold: #c5a059;
+            --bg-light: #ffffff;
+            --text-dark: #1a1a1a;
+            --white: #ffffff;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--white);
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eaeaea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* ICONO MENÚ Y ACCIONES */
+        .header-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--text-dark);
+            stroke-width: 1.8;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* LOGO CIRCULAR GRANDE Y DESTACADO */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 95px;
+            width: 95px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+
+        /* MURO / CONTENEDOR PRINCIPAL */
+        .main-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* ESPACIOS PARA EL MURO (LISTOS PARA PERSONALIZAR) */
+        .wall-section {
+            width: 100%;
+            min-height: 220px;
+            background-color: #f9f8f6;
+            border-radius: 6px;
+            border: 1px dashed #d1c7bd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888888;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 480px) {
+            .logo-container img {
+                height: 80px;
+                width: 80px;
+            }
+            header {
+                padding: 12px 15px;
+            }
+            .header-actions {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!-- Menú Hamburguesa en SVG fino -->
+        <button class="header-icon" aria-label="Menú">
+            <svg viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <!-- Logo Circular Grande -->
+        <div class="logo-container">
+            <img src="maison.png" alt="Maison Peluche Logo">
+        </div>
+
+        <!-- Iconos Superiores Derecha en SVG fino -->
+        <div class="header-actions">
+            <button class="header-icon" aria-label="Cuenta">
+                <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+            <button class="header-icon" aria-label="Buscar">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <button class="header-icon" aria-label="Bolsa">
+                <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- MURO PRINCIPAL -->
+    <main class="main-container">
+        <!-- Bloques listos para colocar contenido o secciones de la marca -->
+        <div class="wall-section">[ Sección de Colección Principal ]</div>
+        <div class="wall-section">[ Sección Destacada / Detalles de Alta Costura ]</div>
+    </main>
+
+</body>
+</html>
